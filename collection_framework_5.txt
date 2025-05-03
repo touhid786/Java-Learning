@@ -1,0 +1,1257 @@
+
+Hey, guys.
+
+Welcome back.
+
+Uh, so yesterday we have covered the hash map and hash table.
+
+And today I am going to cover the linked hash map and tree map.
+
+Okay, so as you already know, the map now and totally in depth linked hash map is very, very similar
+
+to hash map.
+
+But the major difference is that linked hash map maintains an order.
+
+So it maintains 2 or 2 types of order.
+
+You can say that two types of order it maintain.
+
+What is the first one?
+
+The first one is insertion order.
+
+It helps in maintain the insertion order.
+
+What does insertion order means?
+
+If you have inserted the items like one, two, three, four and when you try to access it, you will
+
+get same.
+
+The way you inserted you will get first one, then two, then three, then four.
+
+So linked hash map helps to maintain the insertion order plus we can also use it to maintain the access
+
+order.
+
+So access order means the one which frequently used frequently used that you will find it at the end.
+
+For example you have used three just now, so you will find 124, three.
+
+So means like this.
+
+Highly frequently used items would be present at last, less frequently used.
+
+So this is the access order.
+
+So access order is less frequently used to high frequently used elements would be you will be able to
+
+get insertion order means like the way the elements are inserted.
+
+When you get it, you will get the same way.
+
+I will tell you both how to do that with an example, but just wanted to tell you that how it differ
+
+from HashMap.
+
+HashMap doesn't maintain an order, but linked HashMap provides you two type of ordering, Insertion
+
+and access order how we will see it.
+
+So what linked hash map does differently than hash map?
+
+It uses the double linked list.
+
+It uses the double linked list.
+
+Now let's see that when.
+
+So now you can ask me that.
+
+Hey, you are saying that it is exactly same as hash map, but you are saying it is using the double
+
+linked list.
+
+How?
+
+Now I will tell you how.
+
+So I am taking this example.
+
+Let's say in a map I wanted to insert like this element one and value is a 21 is the key value is B,
+
+23 is the key value is C.
+
+And like that.
+
+So you know that.
+
+Now you already know hash map.
+
+Now let's say this is the hash map it created.
+
+Let's say the hash map.
+
+First initialize the size I have taken three.
+
+So three buckets created with a entry key array okay.
+
+There might be some hash value present.
+
+I have just ignored it.
+
+So let's say key one and A is stored here.
+
+Index zero 21 B is also its hash also comes to the zero only.
+
+So it added to its next.
+
+So it would be here 23 C is added here in the index one 141 D is added here at index three.
+
+And 25 E is added at let's say index one.
+
+So index one already has 23.
+
+So its next would have this.
+
+So this is the normal hash map.
+
+We already know that.
+
+Now you can say that hey how linked hash map differs from it.
+
+So this is the linked hash map of it.
+
+So don't worry about this.
+
+There are a lot of lines here.
+
+So here I'll tell you what is the difference.
+
+See what is the linked list.
+
+If you see the double linked list.
+
+So one the next element is 21, next element is 23, then next is 141 and the next is 25.
+
+So in the doubly linked list what it would be.
+
+So after.
+
+So you will have like this.
+
+And there would be one pointer here okay.
+
+So generally we have two pointer right.
+
+Uh after and before.
+
+So I think it would be better if I draw like this.
+
+It would make more sense.
+
+So in the doubly linked list every node have two points like before after.
+
+And the value value is one.
+
+Then it has before after.
+
+And the value value is 21.
+
+Then before after value is 23.
+
+Before after value is 141 and then 25, 141 and then 25.
+
+So what would happen is for this element one it's after it will point to this and it's before will point
+
+to this.
+
+Right.
+
+And this would be null.
+
+It's this is after.
+
+So this after will point to this.
+
+It's before will point to this.
+
+It's after will point to this.
+
+It's before will point to this.
+
+It's after will point to this.
+
+And it's before will point to this.
+
+And it's after would be null.
+
+So this is generally the doubly linked list.
+
+Right.
+
+The same thing happened here also.
+
+Now now if you see the difference the node, this node of this is the node of HashMap.
+
+And but in the node of linked hash map, there is two more elements.
+
+Apart from this, what are the two more elements?
+
+The two more elements is here if you see that before and after.
+
+Okay, so in hash map.
+
+So in hash map generally you have only this hash key value.
+
+Next right there is nothing like before and after.
+
+So this one is for linked hash map okay.
+
+So in hash map you have only hash key value.
+
+And next.
+
+But in the linked hash map you have also this two values.
+
+This two values.
+
+Let me show you this is the linked hash map.
+
+Let's go inside this.
+
+This is the linked hash map class Java class.
+
+Uh, there will be a node or it might be implementing implements entry.
+
+Is it implementing that one.
+
+Let's check its node where it has defined that.
+
+So see.
+
+Yeah this one.
+
+So it extends the hash map.
+
+So linked hash map extends the hash map plus map also.
+
+So that's how it's creating the node.
+
+So here it extends the hash map dot node key.
+
+So whatever the values present into hash map node.
+
+So in the hash map node what all values present hash here hash then key then value hash key value and
+
+the next and the next.
+
+So linked hash map contains two more fields before and after it.
+
+Add another two fields before and after.
+
+So again the same thing.
+
+Now nothing different than hash map.
+
+So now this is the array.
+
+So now when you did put what it will do first step it will find the hash hash of the key.
+
+What is the key here.
+
+One.
+
+Right.
+
+It will find some hash.
+
+Let's say 12345 mod size of the array.
+
+So let's say the default hash map is we created for three size.
+
+Exactly same because linked hash map is a child of hash map only.
+
+So mod three for example the index which come is zero okay this index come is zero let's say.
+
+So we have added hash here key.
+
+We have added here value.
+
+We have added here okay.
+
+So what is after this one.
+
+What should be the one before null.
+
+So here in the before we have put it null.
+
+So currently this is your head.
+
+This is your head.
+
+And before I have put null and after.
+
+After.
+
+So currently when only one element present, this is null and this is also null.
+
+So initially after would be also null only.
+
+Now I am putting second element.
+
+So how does the HashMap works?
+
+First it will generate the hash of 21.
+
+Let's say comes 56789 mod three.
+
+Let's say again comes the index zero.
+
+Only when it comes to index zero it says that hey, already one node is present here.
+
+What it will do is in its next exactly same as HashMap.
+
+In its next it put a 21 so its hash five six, seven, whatever it would come five six, 789 21 key
+
+and value it put here now.
+
+So it's like now you are putting the second element 21.
+
+So what should be the after of this head?
+
+So it would be this.
+
+So that's what I am doing here.
+
+So here if you see it's after now pointing to this.
+
+Right.
+
+And what should be the before of this one.
+
+So it's before is pointing to this.
+
+And this would be currently null.
+
+So currently this would be null.
+
+Now the same the third element 23 will come.
+
+So how 23 would be inserted let's say hash u created a hash.
+
+You did a mod.
+
+Let's say it comes index one.
+
+So at index one we inserted 23 okay.
+
+So we inserted 23.
+
+So now in a linked hash linked list what.
+
+After you inserted 23 what should be done.
+
+So after the 21 you should be pointing to this.
+
+And before pointing to this.
+
+So here, here, if you see after of 21 we are pointing to this.
+
+So after it is.
+
+Pointing to 23 only and it's before is pointing to it's before is pointing to 21.
+
+So it's before is pointing to.
+
+21.
+
+Right.
+
+So what we are doing is we are just maintaining the linked list also the way they have inserted.
+
+So after the 23 what we have inserted.
+
+141 so let's say 141 we keep the hash and index.
+
+Come is let's say two index comes 012.
+
+This should be two okay.
+
+So let's say index comes to.
+
+And we have added 141 here.
+
+Okay.
+
+The same as hash map.
+
+So 141 when you did here.
+
+So it's before should point to.
+
+23 and it's after should points to 141.
+
+So 23.
+
+Now it's after points to 141 and 141 before points to 23.
+
+It's before points to 23.
+
+Okay.
+
+And similarly now one more item.
+
+Let's say 25.
+
+Let's say 25 comes.
+
+So let's say it's index come is one.
+
+So at index one already 23 is there.
+
+So what it will do is it's a collision happened.
+
+So in the next it will put 25 right.
+
+This is the 25.
+
+So next it will put 25.
+
+But after the maintenance linked list.
+
+So it's 141 after would point to 25 and 25 before will point to this.
+
+So 141 after is pointing to this and it's before is pointing to 141 right.
+
+And it's after is pointing to null.
+
+It is null.
+
+So you got it.
+
+This so many lines is nothing.
+
+But we are maintaining a linked list also doubly linked list also.
+
+Right.
+
+So that's what it does.
+
+That's why it's linked hash map.
+
+And now you see the difference here.
+
+So take this example I am doing simple creating a map but creating an object of linked hash map.
+
+So linked hash map I am inserting this 12345 items 21 same example one 2123 one 4125 okay, now I am
+
+iterating.
+
+So what?
+
+I got the similar way One, then after that 21, then after that 23, then after that one, 41 after
+
+that, 25 but if I created a normal hash map, the same element see, ordering is not guaranteed.
+
+So here if you see one 2123, but 25 before 25 before 25.
+
+So order we don't guarantee here.
+
+But in the linked hash map order is guaranteed.
+
+So here let's see I'll give you for each one.
+
+Just let's go inside this for each.
+
+So this is I'm creating a new linked hash map.
+
+If you just do for each just see that.
+
+So this is the we parent.
+
+We have to go linked hash map.
+
+So here see how we are iterating.
+
+So we are iterating over the entries or the node.
+
+Each node is starting from head right till it is not equals to null.
+
+And we are moving after.
+
+So it is go iterating through linked hash map.
+
+It iterates through this after.
+
+So this is my head first.
+
+After it printed it goes to after.
+
+Then it will print this.
+
+Then it goes to after.
+
+So after is 23.
+
+After this one is 141.
+
+After this one is 25.
+
+Okay.
+
+So that's why whenever you print the linked hash map, you will always get the insertion order.
+
+Okay, cool.
+
+Now you got right how linked hash map maintains the insertion order.
+
+It maintains through double linked list.
+
+Doubly linked list.
+
+Right.
+
+So exactly same as hash map.
+
+But it also creates a two more extra nodes before and after which it also maintains the two for the
+
+doubly linked list.
+
+Okay, so now you can ask the Haitian.
+
+Okay.
+
+We got to understand that how it maintained an insertion order, but how it maintained the access order
+
+in access order.
+
+I told you that the elements which are very, very frequently used, that would be at last, and the
+
+elements which are less frequently used, that would be at the front.
+
+So here notice this part.
+
+When I created an object I passed nothing.
+
+So okay.
+
+When I passed nothing it gives me an insertion order.
+
+But for access order.
+
+When I created a linked hash map, I passed access order.
+
+True.
+
+So in the linked hash map constructor here, if you see that in the linked hash map constructor there
+
+is two flavors.
+
+There are multiple flavors if you don't give anything.
+
+Access order is by default false.
+
+When access order is false means you want insertion order.
+
+Construct an empty insertion order linked list.
+
+But if you want access, order means you want the low frequently used item to resent or highly frequently
+
+used element here.
+
+Like this.
+
+Then you have to pass this as true.
+
+You have to set access order true.
+
+So this constructor we can use we can give initial capacity 834 whatever you want it to give.
+
+Load factor you already know you can give 0.75.
+
+But access order I give true access order I give true when I give the access order.
+
+Now let's see how the same thing one 2123, 141 41 and 25.
+
+Now how it differs.
+
+Now here, if you see that generally it should print this way.
+
+But now I access one element map dot get 23.
+
+I access this element.
+
+So what it will do is it will, since what we are saying is less frequently used to represent frequently
+
+use.
+
+This is the order.
+
+So 23 it will remove from here and put at the back.
+
+So it should print now.
+
+121 and now I am printing.
+
+So 121 141 2523 121 after that, one 4125 and 23.
+
+So here the highly frequently used would be present here.
+
+So just see this.
+
+So I am doing dot get.
+
+So when you do dot get.
+
+So this is the map we have to go.
+
+It's child or concrete implementation linked hash map.
+
+Uh where is linked hash map.
+
+Linked hash map.
+
+Linked hash map.
+
+So now whenever we are trying to do get anything, it will get like what?
+
+How hash map is used to get big O of one only whatever the logic hash map used to do or get same.
+
+But what additional it has is it check if access order.
+
+Yes, we have given access order true what it will do it.
+
+See it.
+
+Move the node to the last it.
+
+Move the node to the last so it will remove it here.
+
+This code will remove it from here.
+
+Put it at the back and keep maintain the update.
+
+The doubly linked list.
+
+Right.
+
+So that's how it maintain the access order.
+
+So now you can say that hey this can't we use this property of a linked hash map in caching.
+
+In caching also.
+
+Right.
+
+Uh, let's say when you do purge, we have to purge only the less frequently used item high frequently
+
+used item we can keep.
+
+Yes, this can also be used in the caching also.
+
+So in the caching you can maintain a linked hash map and whenever you have to purge, purge from start
+
+because these are the less frequently used and from last, these are the highly frequently used item.
+
+Okay.
+
+Got it.
+
+How linked HashMap works.
+
+It's exactly same as hash map.
+
+Only thing is it maintains the doubly linked list.
+
+Also with this two pointers in the node.
+
+So the time complexity is same as hash map averages.
+
+Big O of one only no difference is that what would be the worst?
+
+Worst is either big O of N right or big O of log n log n in case it has to.
+
+Convert a tree based structure right, but averages big O of one.
+
+Exactly.
+
+Same as hash map.
+
+Nothing differs internally, it's just doing some extra.
+
+Work to maintain a linked list.
+
+Again, it is not a thread safe and there is no.
+
+Thread safe version available.
+
+So we have to manually explicitly make it collection thread safe.
+
+How?
+
+Like this.
+
+Collections dot synchronize map so we can do this way.
+
+So there is you.
+
+You already know about collections right?
+
+I have covered it.
+
+So this is a util class.
+
+In this util class there is a method called synchronize map.
+
+So now here if I do here collections dot synchronize map.
+
+And the linked hash map is not thread safe.
+
+So now what it will do.
+
+So here if you see synchronize map.
+
+Okay.
+
+So now what it will do is whatever the operation you will perform, let's say you are trying to perform
+
+map two dot put.
+
+So this put would be called of which one this class object synchronize map.
+
+So put it will go inside synchronize map okay.
+
+In the collections.
+
+So what it does it just nothing.
+
+It just put synchronize block and ultimately calling put method of this object.
+
+What object.
+
+We are passing linked hash map.
+
+So internally it calling the put method of this only.
+
+But it just added a synchronize block.
+
+So you don't have to manually put synchronize block everywhere.
+
+You have to use put internally.
+
+You can use this collections synchronized map method, and after that you can use the linked hash map
+
+with different threads.
+
+It would be safe.
+
+Okay.
+
+So linked hash map is cleared right I hope.
+
+Now let's understand the tree map.
+
+So here if you see that this tree map is structured so again very easy.
+
+So we have a map.
+
+Map extends sorted map sorted map extends.
+
+So here if you see that this map sorted map extends map then navigable map extends sorted map.
+
+And then this tree map.
+
+This implements.
+
+This is a concrete class which implements this interface.
+
+This is also an interface.
+
+This is also an Interface.
+
+Okay, so what it does, how Treemap is different from HashMap and linked HashMap.
+
+So map is sorted as the name says that it is sorted according to the natural ordering of the key or
+
+by comparator, which we will provide for the map creation.
+
+So one thing is clear that it is sorted.
+
+So what order it will give either ascending or descending.
+
+Only these two order.
+
+It will give not insertion not access.
+
+So it will sort either in the natural order or the whatever the comparator you will provide.
+
+I have already explained the comparator how it will help us to sort in decreasing order or ascending
+
+order, right?
+
+So what tree?
+
+As we say tree.
+
+What tree is used to sort it?
+
+It uses red black tree.
+
+So you know that red black tree is a self-balancing binary search tree, and it uses this to store the
+
+values through which it maintains a sorted ordering.
+
+What is the time complexity is big O of log n.
+
+So here, if you see that this is slower than your hash map linked hash map hash table, their average
+
+is big O of one, its average is big O of log n because it is internally creating a tree self binary
+
+search tree and binary search tree.
+
+It takes log of n.
+
+So how what it does.
+
+So here if you see that what it does is just see this one.
+
+So the same.
+
+Now I am creating map creating a map object of tree map okay.
+
+So I told you that I can use comparator in the Constructor and I am using a comparator here.
+
+Key two minus key one.
+
+So it's ordering based on the keys.
+
+Right.
+
+So what I wanted to do a sorting on descending order decreasing order.
+
+Right.
+
+So this is my values which I want to put into the map.
+
+But comparator which I will give as a decreasing order.
+
+So how what it values it will put in the decreasing.
+
+So first it will put 21 then 13, then 11 and then five, 1321, 13, 11, five.
+
+So in decreasing order, and if you want it to maintain in a, so you created a tree map, but you haven't
+
+defined anything, it will sort in the natural order.
+
+So for integer what is the natural order is ascending.
+
+So 511 1321 five 1113, 21.
+
+Okay, so this is how it insert.
+
+It has the node.
+
+So this is its node structure.
+
+This is its node structure tree map.
+
+So it has key it has value.
+
+It has parent left right.
+
+So now let's say if you want to insert this three elements how it will insert.
+
+So first you are trying to insert this four comma SJ.
+
+So it will cause key value.
+
+What is parent.
+
+So this is the first.
+
+So its parent is null.
+
+It's currently left would be null.
+
+Right would be null let's say.
+
+Now the second item you want to insert is one comma PJ.
+
+So one is lesser than four.
+
+It's a binary search tree.
+
+So it's lesser than four.
+
+So it will go into its left.
+
+So I have created one node.
+
+So this is my key.
+
+This is my value.
+
+And now this.
+
+It's left will point to here.
+
+And this parent will point to the who is the parent of this node.
+
+It's for now I want to store five.
+
+So five is greater than four right.
+
+So it will go to its right.
+
+So see now we are maintaining the binary search tree.
+
+So this is my key.
+
+This is my value.
+
+It's left.
+
+Right is null and its parent is this.
+
+And its right now is this right.
+
+So now if you add more item it will keep on adding like this.
+
+So it's just maintaining the binary search tree.
+
+But the balance one red black tree.
+
+So you got it.
+
+That's why its time complexity is little higher because of log n.
+
+So what are the methods available in sorted map.
+
+So here if you see that you already know what all methods are in map.
+
+Now let's see what all methods are available in sorted map because this is an interface.
+
+What new methods it added.
+
+Then we'll see this navigable interface.
+
+What new method it has added.
+
+So here this four items.
+
+This four methods are added into the sorted map interface.
+
+So here if you see that this is the map okay.
+
+So head map.
+
+So whatever whatever the hash map I created sorted map map two.
+
+So I created a tree map right.
+
+But the tree map I am creating an object of sorted map one.
+
+So I am doing map two dot head map two key 13.
+
+So what?
+
+It will return me.
+
+So you know that internally I haven't give anything.
+
+It will sort in a increasing order.
+
+So five level one 1321 right.
+
+So I have wanted head map.
+
+So from head to 13.
+
+So it will return this five and 11.
+
+So it is exclusive.
+
+Then I want so five and 11.
+
+Then I want tail map from 13.
+
+So this is excluded.
+
+So from this to tail.
+
+So only 21 it will give.
+
+Okay.
+
+Sorry from is this is inclusive.
+
+This will return 13 and 21.
+
+So in the remember this in the two part it is exclusive and in the from part it is inclusive.
+
+So this is inclusive part sorry.
+
+Till tail.
+
+So 13 and 21 will be the output.
+
+Then I will do map two.
+
+First key.
+
+So what would be the first key here in the sorted.
+
+This is five map two dot last key.
+
+What is the last key 2121.
+
+So these four keys are four methods which are available which it might.
+
+If we need it, we can use it anyway.
+
+But in the last eight years I haven't used it so.
+
+But might be these methods are available.
+
+Similarly here if you see that tree map also is a child of navigable map.
+
+So what?
+
+All methods added here 14 or 17 methods are available in the navigable map interface.
+
+So but very very self-explanatory.
+
+So I have used this example.
+
+So in the tree map.
+
+So this would not be a linked hash map.
+
+This is your tree map.
+
+This would be your tree map.
+
+And this would be sorted in the ascending order.
+
+So it would be like one uh then 21, then 23, then 25, then 141.
+
+So then one method is, say the lower entry and provide the key.
+
+So I have provided 23 lower map dot lower entry 23.
+
+So what I get what this says that it will return the entry node means it has key value both and what
+
+it will return less than 23.
+
+If there is any value otherwise return null.
+
+So 23 what value is less than is 21, so it will return 21 be so key value 21 be.
+
+Similarly there is lower key.
+
+It was lower entry.
+
+So it entry node you know right.
+
+It has both key value.
+
+Key is now only key.
+
+So it will only return lesser than this value whatever the key I have given.
+
+So it will return only key 21 not the value okay.
+
+So lower entry and lower key means value should be less than whatever the key you are providing.
+
+And there is something called floor.
+
+So floor means less or IC less or equal.
+
+So first it will say that hey, do you have an equal?
+
+Then return that.
+
+If no return the lesser one.
+
+So when I do dot map dot floor entry 24.
+
+So it will check here 24 is present.
+
+No 24 is not present.
+
+So what.
+
+It will return lesser than this 23.
+
+So it is an entry.
+
+So it will return 23 comma its value.
+
+See.
+
+So there is something called floor key.
+
+Key means it will return only the key part not the value part.
+
+So it will return only 23.
+
+But there is a like if I give 23 itself map dot floor entry 23.
+
+So its floor means equal or less.
+
+So yes, 23 is already present, so it will return 23 also.
+
+So lower means strictly lesser than this floor means same and less.
+
+If it is same is present.
+
+Return that.
+
+If the same key is not present, uh, return the lesser one.
+
+Similar ceiling.
+
+So 121, 121 2325 141.
+
+So ceiling ceiling is equal or greater.
+
+Right floor ceiling equal or greater.
+
+So ceiling entry 23.
+
+Hey, 23 is present.
+
+Yes.
+
+So return that ceiling.
+
+Entry 24.
+
+Hey 24 is there.
+
+No.
+
+Then it's greater 25 E similarly key.
+
+It will return only key part 2523 like not the value part.
+
+Right ceiling entry ceiling key higher is strictly greater than.
+
+That's very very self-explanatory.
+
+You can see.
+
+So it higher is like strictly 23.
+
+What is the next greater than.
+
+This is 25.
+
+If you give 25 what is the next greater than is 141 first entry like you can give map dot first entry
+
+if you like.
+
+So this this is not required.
+
+Uh, this one first entry you will give it will give the first increasing order.
+
+One last entry.
+
+You will give.
+
+So this is the last entry.
+
+What it will give the last one pole first entry.
+
+So pole is something which is taken out.
+
+So it will return the least item from the map.
+
+And but it will also be removed from the map.
+
+Now one would be remove from the hash map pole.
+
+Last entry.
+
+It will return the last element last element from the map and that would be removed from the map.
+
+Also descending map.
+
+It will reverse the map and return.
+
+So if you have map like this 1359 increasing order.
+
+So decreasing map will give you 1531 opposite key set key Set will return you the only key part of it.
+
+Like this.
+
+This part?
+
+Like.
+
+But in a increasing order.
+
+121 2325 141 because Treemap stores the data in increasing order, there is something called decreasing
+
+key set.
+
+So it will give you a data into decreasing order.
+
+Similarly, there is a head map like as.
+
+If you remember the head head map is also there in the sorted.
+
+So here it is a little bit more clear that provide a key.
+
+And do you want to include it.
+
+It should inclusive or not.
+
+So let's say I give 23 to include it so it will return.
+
+One 2123 let's say from tail map from inclusive.
+
+So 23 yes, inclusive.
+
+True.
+
+So 23 2541 so this is more clear actually, whether we have to enclose it or not include it.
+
+So these are very simple methods which are available in navigable map and sorted map.
+
+So go through it.
+
+So these are our map which is finished.
+
+Now what.
+
+All left is your set.
+
+Right.
+
+We are.
+
+The set is map and the stream.
+
+This two is left after that collection would be finished.
+
+Set would be very very easy because set uses exactly the same data structure.
+
+Has set uses hash map internally.
+
+Right.
+
+So it's almost same.
+
+So set you won't find any problem at all if you understand the map properly.
+
+And then we will learn stream in depth.
+
+Very very important.
+
+Okay guys if you have any doubt let me know in the comment section and I hope you are enjoying this
+
+series by.
+
