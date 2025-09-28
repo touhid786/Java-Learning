@@ -1,0 +1,381 @@
+hey guys welcome to concept encoding
+this is shreyansh and today I'm going to
+tell you about the get three branching
+strategy this is mostly used in the MNC
+so in mncs mostly you will find this
+three branching strategy only uh in
+startup I doubt that they might be using
+it but at least you will see in it is
+very popular in the MNC at least right
+so let's say what it is uh three
+branching strategies so in the if you
+are using GitHub or gitlab you will see
+that generally there will have three
+branches one is
+develop
+second one is
+release
+third one is master
+now let's say the version of the code
+currently it has V1
+V1
+V1 and let's say in the production
+the build which is generated out of this
+V1 code is currently running
+okay now let's say
+all the engineers starting
+to raise their pull request
+on get there and get it merge onto the
+developer itself right
+so now let's say uh when we when we
+start the release process what we will
+do is first
+take the changes from
+develop to release take the changes from
+develop to release
+okay so what we will do as a part of
+this change so now let's say your
+develop release master so develop let's
+say after merging the couple of PRS got
+merged and after that develop version is
+let's say V2 release is still on V1
+Master is still on V1 and in production
+the code is which is running on the V1
+build that's it but develop has certain
+more changes and let's say its version
+is V2 as of today
+and now we wanted to start the release
+process so what is the first step take
+the changes from develop to release so
+what we will do is we will take the
+changes from develop to release so
+release version now will become to V2
+what does V2 means all the changes which
+are present into the develop now it's
+also presented to the release okay now
+what is the Second Step you start the
+regression
+on release branch
+okay so now what will happen is uh we do
+regression means running the Ft so you
+have my let's say functional test cases
+100 functional discusses 200 functional
+distances and if you join certain big
+mnc's companies you will find that there
+might be a thousand of functional test
+cases also very very common right so you
+run your regression you run all the
+functional test cases on this build
+which is generated out of V2 so we are
+validating that we are not breaking
+anything in life right
+and let's say if regression is done
+properly what is the third step is
+push to life
+push to live so now develop is you have
+V2 releases having V2 Master is having
+V1
+in live build was running on V1 build
+so now as a part of third step after
+regression is completed on this V2 what
+we have to do is push to live what we
+will do is
+push to life so now we will change it to
+V2 build
+okay so what's the four step monitor
+so now we will monitor the live that
+everything is working fine on the live
+traffic nothing is breaking it's all
+going good right so once we very
+validate that yes everything is fine
+this build is proper now what we will do
+is
+fifth step back much
+right so what we will do is we will do
+back merge two of uh update the master
+also and update the developer also so
+developers already has V2 itself no
+let's say no changes has merged through
+the develop so
+no changes will come to the develop but
+Master will change it to V2 so now
+everything is V2 V2 V2 and and
+production also V2 build is running
+so now you can ask me a question that
+hey what is the use of Master then so we
+did a regression on release and from
+release itself we pushed to the live
+then what is the use of Master I'll tell
+you what is the use of Master then let's
+say you have a developed release Master
+production the same let's say it has V1
+V1 V1 and it is running on V1 build
+okay so now let's say couple of PR merge
+into the develop
+and the day which you started so
+developers has V2
+release and master bar having V1 V1 and
+in production it was V1
+okay so the day you started that yes I
+wanted to do a release there are so many
+PR's much to develop develop I have
+certain V2 version of the code so we
+bring the changes to the release first
+step
+now in the second step
+regression started
+regression started let's say that
+regression might take one day
+regression takes one day
+okay so you are doing a regression now
+let's say while your regression is
+running
+ah
+hot fix you have to take what does
+hotfix means hotfix means
+there is an issue in the live which you
+have to fix immediately
+right you can't wait like you can't just
+fix it into the develop then you start
+the release process then do regression
+and then do it has to be merged
+immediately fix it immediately if you
+have to take hot fix
+now release has
+V2 version because we have taken the
+changes from develop to release V2
+version and regression is going on
+regression takes regression is very very
+effort taking step and it generally
+sometimes take one day also right
+because it might have thousand test
+cases and all
+so if you have to take immediately the
+hotfix how you will take it then they
+are the master Branch comes into the
+picture so Master is always equivalent
+to the
+production
+right so what we will do is we'll take
+the hotfix here so let's say we'll take
+version 1.1 so certain
+fix on top of this generate a bill and
+push it so live would have 1.1 build
+so with the hotfix
+right
+so now let's say what happen is let's
+say you have taken a hot fix then what
+we have to do we have to take this
+changes to the release right otherwise
+otherwise if you take don't take the
+changes to release what will happen is
+when this release regression is done if
+it puts to the production this hot fix
+changes will get loose right so we
+should not it this should not happen
+so what happen is once you have taken a
+hot fix you have uh put a fix over this
+master branch which was equivalent to
+the production you have made your
+changes push it to the live now customer
+impact is solved now what you have to do
+is you have to bring the master hotfix
+to release
+okay so this hotfix changes bring to the
+release now you see that only you have
+to generate a build again so you have to
+generate a new build
+but your regression will won't impact
+whatever the time you have taken let's
+say out of 1000 test cases there were 50
+failures and you are analyzing these 50
+failures you don't have to start the
+regression again because you know that
+everything it has only one hotfix is
+coming so you you know that it's not
+bringing certain additional changes so
+that you don't have to you have to start
+the regression again
+right
+otherwise
+let's say if you do this just assume
+with this one
+you have let's say V2 V1
+V1 and let's say this is your production
+okay now you want to start the release
+process you change it to V2 and you
+started the regression
+you started the regression regression
+let's say the version only take one day
+and your there are 100 failures and you
+are analyzing it
+now is certain hotfix come
+and let's say after this V2 there are
+certain PRS merge to the develop
+PR Marshall the develop and current
+version of the develop is currently
+let's say V3
+okay so now let's say the hotfix come if
+you don't have the master branch
+what you have to do you have to revert
+the changes in first of all release you
+have to make it so what you have to do
+is first again so develop is your V3
+from R was your V2 now so you have to
+revert it back to the V1 so you have to
+revert the pr which you have bring the
+changes from develop to release right
+develop to release from V1 you become V2
+so you have to revert that PR you have
+to again make it to the version one now
+you do a hotfix changes so you will make
+1.1 generate a build and put into the
+production
+okay
+if there is no master and then after
+this is done then you have to again
+bring this changes back from develop to
+release but now it will be now a kind of
+V3
+and now you see that whatever regression
+you did now you have to start it over
+again because
+earlier whatever the changes you have
+done over the V2 after that certain more
+changes has been done right so you have
+to validate those changes also right so
+you have to start the regression again
+and I can tell you this regression is
+very very very time consuming process
+there might be 2000 test cases certain
+time 200 failures you have to analyze
+each one why they are failing right so
+this is very very critical step
+so that's why in three branching system
+if any hot fix comes it is very easy
+then it do not impact our regression
+process release process so if release is
+going in parallel then hotfix comes your
+release process doesn't get impact
+it will continue it will continue to do
+a regression and all if hotfix comes in
+parallel they are also not blocking that
+I have to revert it and then do this
+thing then release process will stop no
+so release guy will continue the
+regression and all hot fix guy who else
+has to take they will do it on Master
+done it and bring these changes to the
+release only
+right so the release guy don't have to
+do the regression again because it know
+that what changes are coming and it's
+already in life so it doesn't have to
+new these are those are not new change
+which has to
+validate
+got it so you know right why develop
+release Master comes and one thing also
+is that you know right why we are doing
+this back much so back merge is also
+sometimes necessary
+now let's say I told you that let's say
+it is V1 V1 V1
+right it's a production
+let's say develop got few PR's merge
+it change to B2 now you wanted to start
+a release process it goes to the release
+it becomes V2 right and then let's say
+it everything is fine it goes to this
+live
+so it is on V2 build now
+currently it's M1 and it's V1 so now
+everything is live now
+let's say while this is happen and
+develop certain more PR God merge and
+currently developed version is going V3
+okay so now let's say
+this is live now V2 build V2 build is
+live
+but we are waiting we are currently in
+monitoring phase
+so that's why we haven't updated in
+master yet because currently it's
+monitoring whatever the build we have
+pushed to the live we are monitoring hey
+okay monitoring can be one day we are
+just checking everything is going good
+or not right
+so now it is monitoring well now let's
+say we found certain bug in this build
+if we found certain bug in this build
+right and let's say we have to fix it
+immediately we can't take it from Master
+now because master has V1
+so what we will do is we'll put a hotfix
+here in the V2 release
+so in the release so your develop is V3
+release was V2 master was V1 in live it
+was running on V2 build
+now if with this V2 build during
+monitoring you find that hey it's an
+issue and we have to fix it so what
+we'll do is you will put a hotfix here
+in
+here in release so let's say you put a
+hotfix and you got certain changes in
+this merge now you uh take a build just
+do a regression and put it again here
+so now live has
+v 2.1 build
+okay now you are doing monitoring now
+everything goes fine yes this build is
+perfect one day no no error nothing
+everything is good now you have to do is
+back merge why back merge is important
+because here if you see that
+foreign
+doesn't have this hot fixed changes
+right if you don't do back merge and
+then when the next person start the
+release process it will merge from
+develop to release and when it merge
+from develop to release due to hot fix
+version which you have much to release
+will get loose right it get lost so what
+you have to do is after everything is
+fine you have to do backwards so that
+developed also get this hotfix changes
+into this one kind of V 3.1 you can say
+right not V 3.1 but develop will get
+this hot fixed changes and similarly we
+will update the master that yes live
+build is up to date working properly now
+we can also have this
+version 2.1
+this is version 2.1 and all version any
+hotfix also will also
+goes there so everything would be in
+sync now
+I hope you got it right why this three
+Bill uh three branch system is required
+right because hotfix can come
+even in the live while regression is
+happening while regression is happening
+code has not been pushed but in the live
+build it comes in the Life code so hot
+fix can come then Master can help you
+if you have pushed the code from release
+right with the new code and any hot and
+you have to take hot fix then with the
+release you can do and then you have to
+do back merge
+okay and update the master
+I hope you got it guys so this three
+branching system is very very popular
+and I think maybe in your companies you
+might be using it if not and I'm pretty
+much sure that maybe in your next
+company and soon you will see that this
+is how most of the companies are using
+it okay okay guys thank you bye
